@@ -9,6 +9,7 @@ import Gallery from './pages/Gallery';
 import Membership from './pages/Membership';
 import Contact from './pages/Contact';
 import AdminDashboard from './pages/AdminDashboard';
+import About from './pages/About';
 
 const App: React.FC = () => {
   return (
@@ -16,13 +17,13 @@ const App: React.FC = () => {
       <Routes>
         {/* Main Site Routes */}
         <Route path="/" element={<Layout><Home /></Layout>} />
-        <Route path="/about" element={<Layout><div className="py-32 text-center text-4xl font-bold">About IEI Salem - Full History Page</div></Layout>} />
+        <Route path="/about" element={<Layout><About /></Layout>} />
         <Route path="/committee" element={<Layout><Committee /></Layout>} />
         <Route path="/events" element={<Layout><Events /></Layout>} />
         <Route path="/gallery" element={<Layout><Gallery /></Layout>} />
         <Route path="/membership" element={<Layout><Membership /></Layout>} />
         <Route path="/contact" element={<Layout><Contact /></Layout>} />
-        
+
         {/* Admin Routes */}
         <Route path="/admin" element={<AdminDashboard />} />
       </Routes>

@@ -26,30 +26,15 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Top Bar */}
-      <div className="bg-iei-primary text-white py-2 px-4 text-xs flex justify-between items-center hidden md:flex">
-        <div className="flex space-x-4">
-          <span className="flex items-center gap-1"><Phone size={14} /> +91 427 244 0405</span>
-          <span className="flex items-center gap-1"><Mail size={14} /> salemlc@ieindia.org</span>
-        </div>
-        <div className="flex space-x-4">
-          <Link to="/admin" className="hover:text-iei-accent">Admin Portal</Link>
-          <div className="flex space-x-2">
-            <Facebook size={14} />
-            <Linkedin size={14} />
-          </div>
-        </div>
-      </div>
-
       {/* Navigation */}
       <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-white/95'}`}>
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+        <nav className="w-full px-4 sm:px-6 lg:px-8">
+          <div className={`flex justify-between items-center transition-all duration-300 ${isScrolled ? 'h-16' : 'h-20'}`}>
             <Link to="/" className="flex items-center gap-3">
-              <img src="https://picsum.photos/seed/iei-logo/60/60" alt="IEI Logo" className="h-14 w-14 rounded-full" />
+              <img src="/data/iei-logo.png" alt="IEI Logo" className={`transition-all duration-300 ${isScrolled ? 'h-10 w-10' : 'h-14 w-14'}`} />
               <div>
-                <h1 className="text-iei-primary font-bold text-lg leading-tight">The Institution of Engineers (India)</h1>
-                <p className="text-gray-600 text-sm font-medium">Salem Local Centre (IEI-SLC)</p>
+                <h1 className={`text-iei-primary font-bold leading-tight transition-all duration-300 ${isScrolled ? 'text-base' : 'text-lg'}`}>The Institution of Engineers (India)</h1>
+                <p className={`text-gray-600 font-medium transition-all duration-300 ${isScrolled ? 'text-xs' : 'text-sm'}`}>Salem Local Centre (IEI-SLC)</p>
               </div>
             </Link>
 
@@ -59,9 +44,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`text-sm font-semibold transition-colors ${
-                    location.pathname === link.path ? 'text-iei-accent underline underline-offset-8 decoration-2' : 'text-gray-700 hover:text-iei-primary'
-                  }`}
+                  className={`text-sm font-semibold transition-colors ${location.pathname === link.path ? 'text-iei-accent underline underline-offset-8 decoration-2' : 'text-gray-700 hover:text-iei-primary'
+                    }`}
                 >
                   {link.name}
                 </Link>
@@ -117,7 +101,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
               <Linkedin className="hover:text-iei-accent cursor-pointer" />
             </div>
           </div>
-          
+
           <div>
             <h3 className="text-xl font-bold border-b border-white/20 pb-2 mb-6">Quick Links</h3>
             <ul className="space-y-3 text-sm text-gray-300">

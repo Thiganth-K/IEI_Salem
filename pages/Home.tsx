@@ -11,59 +11,75 @@ const Home: React.FC = () => {
   return (
     <div>
       <Ticker />
-      
+
       {/* Hero Section */}
-      <section className="relative h-[650px] flex items-center overflow-hidden">
+      <section className="relative h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src="https://picsum.photos/seed/salem-iei/1920/1080" 
-            alt="IEI Salem" 
+          <img
+            src="/data/iei-home.avif"
+            alt="IEI Salem"
             className="w-full h-full object-cover scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-iei-primary/95 to-iei-primary/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-iei-primary/60"></div>
         </div>
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white z-10">
-          <div className="max-w-2xl animate-fade-in-up">
-            <h4 className="text-iei-accent font-bold tracking-widest text-sm mb-4">ESTABLISHED 1920 • SALEM CHAPTER</h4>
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
+
+        <div className="relative z-10 max-w-4xl ml-0 pl-8 pr-4 -mt-32">
+          <div className="text-left">
+
+            <div className="inline-block border-2 border-blue-900 text-white px-4 py-1 rounded-full text-xs font-bold tracking-widest mb-6 animate-fade-in-up backdrop-blur-sm mt-28">
+              ESTABLISHED 1920 • SALEM CHAPTER
+            </div>
+
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 animate-fade-in-up delay-100 text-white">
               Empowering Engineering Excellence in Salem
             </h1>
-            <p className="text-lg md:text-xl text-gray-200 mb-10 leading-relaxed font-light">
+            <p className="text-lg md:text-xl text-gray-200 mb-10 leading-relaxed font-light animate-fade-in-up delay-300">
               Providing a global platform for technical advancement, professional networking, and institutional growth for the engineering fraternity in Salem region.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/membership" className="bg-iei-accent text-white px-8 py-4 rounded-full font-bold text-center hover:bg-blue-600 transition-all transform hover:-translate-y-1 shadow-lg">
-                Become a Member
+
+            {/* Stats in Hero */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 animate-fade-in-up delay-400">
+              <div className="text-left border-2 border-iei-primary p-3 rounded-lg backdrop-blur-sm">
+                <div className="text-2xl md:text-3xl font-bold text-white mb-1">5,000+</div>
+                <div className="text-xs text-gray-300">Active Members</div>
+              </div>
+              <div className="text-left border-2 border-iei-primary p-3 rounded-lg backdrop-blur-sm">
+                <div className="text-2xl md:text-3xl font-bold text-white mb-1">100+</div>
+                <div className="text-xs text-gray-300">Years of Legacy</div>
+              </div>
+              <div className="text-left border-2 border-iei-primary p-3 rounded-lg backdrop-blur-sm">
+                <div className="text-2xl md:text-3xl font-bold text-white mb-1">15+</div>
+                <div className="text-xs text-gray-300">Student Chapters</div>
+              </div>
+              <div className="text-left border-2 border-iei-primary p-3 rounded-lg backdrop-blur-sm">
+                <div className="text-2xl md:text-3xl font-bold text-white mb-1">15</div>
+                <div className="text-xs text-gray-300">Engineering Divisions</div>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-500">
+              <Link to="/membership" className="skew-btn">
+                <span className="skew-btn_lg">
+                  <span className="skew-btn_sl"></span>
+                  <span className="skew-btn_text">Become a Member</span>
+                </span>
               </Link>
-              <Link to="/events" className="bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-bold text-center hover:bg-white hover:text-iei-primary transition-all">
+              <Link to="/events" className="hero-btn hero-btn-primary mt-2">
                 View Upcoming Events
+                <div className="icon">
+                  <svg height={24} width={24} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor" />
+                  </svg>
+                </div>
               </Link>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="bg-white py-12 shadow-inner border-b">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            { icon: <Users size={32} className="text-iei-accent" />, label: 'Active Members', value: '5,000+' },
-            { icon: <Award size={32} className="text-iei-accent" />, label: 'Years of Legacy', value: '100+' },
-            { icon: <BookOpen size={32} className="text-iei-accent" />, label: 'Student Chapters', value: '15+' },
-            { icon: <Globe size={32} className="text-iei-accent" />, label: 'Engineering Divisions', value: '15' },
-          ].map((stat, i) => (
-            <div key={i} className="text-center flex flex-col items-center">
-              <div className="mb-3">{stat.icon}</div>
-              <div className="text-3xl font-bold text-iei-primary">{stat.value}</div>
-              <div className="text-gray-500 text-sm font-medium">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </section>
+      </section >
 
       {/* Feature Section: About IEI SLC */}
-      <section className="py-24 bg-gray-50">
+      < section className="py-16 bg-gray-50" >
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl relative z-10">
@@ -95,12 +111,12 @@ const Home: React.FC = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Featured Event Section (QC-NDT Style) */}
-      <section className="py-24 bg-iei-primary text-white overflow-hidden relative">
+      < section className="py-24 bg-iei-primary text-white overflow-hidden relative" >
         <div className="absolute top-0 right-0 opacity-10 pointer-events-none">
-          <svg width="400" height="400" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="white"/></svg>
+          <svg width="400" height="400" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="white" /></svg>
         </div>
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="flex justify-between items-end mb-12">
@@ -143,16 +159,23 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Partners/Affiliations */}
-      <section className="py-16 bg-white border-t">
+      {/* Partners/Affiliations - Auto Scroll */}
+      <section className="py-16 bg-gray-50 border-t overflow-hidden">
         <div className="max-w-7xl mx-auto px-4">
-          <h3 className="text-center text-gray-400 font-bold uppercase tracking-widest text-xs mb-10">Our Partners & Affiliations</h3>
-          <div className="flex flex-wrap justify-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all">
-            <img src="https://picsum.photos/seed/p1/120/60" alt="Partner" />
-            <img src="https://picsum.photos/seed/p2/120/60" alt="Partner" />
-            <img src="https://picsum.photos/seed/p3/120/60" alt="Partner" />
-            <img src="https://picsum.photos/seed/p4/120/60" alt="Partner" />
-            <img src="https://picsum.photos/seed/p5/120/60" alt="Partner" />
+          <h3 className="text-center text-gray-500 font-bold uppercase tracking-widest text-xs mb-10">Our Partners & Affiliations</h3>
+        </div>
+        <div className="relative">
+          <div className="flex animate-scroll-partners gap-16 items-center">
+            {[...Array(2)].map((_, setIndex) => (
+              <div key={setIndex} className="flex gap-16 items-center shrink-0">
+                <img src="https://picsum.photos/seed/partner1/150/80" alt="Partner 1" className="h-16 w-auto object-contain transition-all opacity-60 hover:opacity-100" />
+                <img src="https://picsum.photos/seed/partner2/150/80" alt="Partner 2" className="h-16 w-auto object-contain transition-all opacity-60 hover:opacity-100" />
+                <img src="https://picsum.photos/seed/partner3/150/80" alt="Partner 3" className="h-16 w-auto object-contain transition-all opacity-60 hover:opacity-100" />
+                <img src="https://picsum.photos/seed/partner4/150/80" alt="Partner 4" className="h-16 w-auto object-contain transition-all opacity-60 hover:opacity-100" />
+                <img src="https://picsum.photos/seed/partner5/150/80" alt="Partner 5" className="h-16 w-auto object-contain transition-all opacity-60 hover:opacity-100" />
+                <img src="https://picsum.photos/seed/partner6/150/80" alt="Partner 6" className="h-16 w-auto object-contain transition-all opacity-60 hover:opacity-100" />
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -162,10 +185,10 @@ const Home: React.FC = () => {
 
 // Internal icons helper
 const MapPin = ({ size }: { size: number }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
 );
 const Calendar = ({ size }: { size: number }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>
 );
 
 export default Home;
