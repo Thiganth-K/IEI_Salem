@@ -317,3 +317,18 @@
 .skew-btn:hover .skew-btn_lg::after {
     background-color: #fff;
 }
+
+/* Light Rays Continuous Animation */
+.animate-pulse-slow {
+    animation: pulseSlow 4s ease-in-out infinite;
+}
+
+@keyframes pulseSlow {
+    0%, 100% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}

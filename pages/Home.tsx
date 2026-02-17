@@ -2,6 +2,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Ticker from '../components/Ticker';
+import GlareHover from '../components/GlareHover';
+import StarBorder from '../components/StarBorder';
+import LightRays from '../components/LightRays';
 import { Award, Users, BookOpen, Globe } from 'lucide-react';
 import { MOCK_EVENTS } from '../constants';
 
@@ -118,6 +121,23 @@ const Home: React.FC = () => {
         <div className="absolute top-0 right-0 opacity-10 pointer-events-none">
           <svg width="400" height="400" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="white" /></svg>
         </div>
+        
+        {/* Light Rays Background */}
+        <div className="absolute inset-0 opacity-70 animate-pulse-slow">
+          <LightRays
+            raysOrigin="top-center"
+            raysColor="#ffffff"
+            raysSpeed={1.2}
+            lightSpread={1.2}
+            rayLength={2.2}
+            pulsating={false}
+            fadeDistance={1.2}
+            saturation={1.0}
+            followMouse={false}
+            mouseInfluence={0}
+          />
+        </div>
+        
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="flex justify-between items-end mb-12">
             <div>
@@ -129,33 +149,67 @@ const Home: React.FC = () => {
             </Link>
           </div>
 
-          <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl overflow-hidden flex flex-col md:flex-row shadow-2xl">
-            <div className="md:w-1/2 aspect-video md:aspect-auto">
-              <img src={featuredEvent.imageUrl} alt={featuredEvent.title} className="w-full h-full object-cover" />
+          <GlareHover
+            width="100%"
+            height="auto"
+            background="transparent"
+            borderRadius="1.5rem"
+            borderColor="rgba(255, 255, 255, 0.1)"
+            glareColor="#ffffff"
+            glareOpacity={0.15}
+            glareAngle={-45}
+            glareSize={300}
+            transitionDuration={800}
+            className="bg-white/5 backdrop-blur-lg"
+          >
+            <div className="flex flex-col md:flex-row shadow-2xl w-full h-full">
+              <div className="md:w-1/2 aspect-video md:aspect-auto">
+                <img src={featuredEvent.imageUrl} alt={featuredEvent.title} className="w-full h-full object-cover" />
+              </div>
+              <div className="md:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-iei-accent text-white px-3 py-1 rounded text-xs font-bold uppercase tracking-widest">{featuredEvent.type}</span>
+                  <span className="text-gray-400 text-xs">• {featuredEvent.status}</span>
+                </div>
+                <h3 className="text-3xl font-bold mb-4">{featuredEvent.title}</h3>
+                <div className="space-y-3 mb-8 text-gray-300">
+                  <p className="flex items-center gap-2"><MapPin size={18} /> {featuredEvent.venue}</p>
+                  <p className="flex items-center gap-2"><Calendar size={18} /> {featuredEvent.date}</p>
+                </div>
+                <p className="text-gray-400 mb-8 line-clamp-3">
+                  {featuredEvent.description}
+                </p>
+                <div className="flex gap-4">
+                  <StarBorder
+                    as="button"
+                    color="#ffffff"
+                    speed="4s"
+                    thickness={2}
+                    style={{
+                      '--inner-bg': 'white',
+                      '--inner-text': '#1e40af',
+                      '--inner-border': 'transparent'
+                    } as React.CSSProperties}
+                  >
+                    Register Now
+                  </StarBorder>
+                  <StarBorder
+                    as="button"
+                    color="rgba(255, 255, 255, 0.6)"
+                    speed="5s"
+                    thickness={2}
+                    style={{
+                      '--inner-bg': 'transparent',
+                      '--inner-text': 'white',
+                      '--inner-border': 'rgba(255, 255, 255, 0.3)'
+                    } as React.CSSProperties}
+                  >
+                    Brochure
+                  </StarBorder>
+                </div>
+              </div>
             </div>
-            <div className="md:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="bg-iei-accent text-white px-3 py-1 rounded text-xs font-bold uppercase tracking-widest">{featuredEvent.type}</span>
-                <span className="text-gray-400 text-xs">• {featuredEvent.status}</span>
-              </div>
-              <h3 className="text-3xl font-bold mb-4">{featuredEvent.title}</h3>
-              <div className="space-y-3 mb-8 text-gray-300">
-                <p className="flex items-center gap-2"><MapPin size={18} /> {featuredEvent.venue}</p>
-                <p className="flex items-center gap-2"><Calendar size={18} /> {featuredEvent.date}</p>
-              </div>
-              <p className="text-gray-400 mb-8 line-clamp-3">
-                {featuredEvent.description}
-              </p>
-              <div className="flex gap-4">
-                <button className="bg-white text-iei-primary px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition-all">
-                  Register Now
-                </button>
-                <button className="border border-white/30 px-8 py-3 rounded-full font-bold hover:bg-white/10 transition-all">
-                  Brochure
-                </button>
-              </div>
-            </div>
-          </div>
+          </GlareHover>
         </div>
       </section>
 
