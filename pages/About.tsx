@@ -52,7 +52,7 @@ const About: React.FC = () => {
             <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0">
                     <img
-                        src="/data/iei-home.avif"
+                        src="/assets/iei-home1.jpg"
                         alt="About IEI Salem"
                         className="w-full h-full object-cover"
                     />

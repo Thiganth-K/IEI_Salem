@@ -15,12 +15,12 @@ const Home: React.FC = () => {
     <div>
       <Ticker />
 
-      {/* Hero Section */}
+      {/* Hero Section with Dam Photo */}
       <section className="relative h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/data/iei-home.avif"
-            alt="IEI Salem"
+            src="/assets/iei-home.jpg"
+            alt="Mettur Dam Salem"
             className="w-full h-full object-cover scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-iei-primary/60"></div>
@@ -28,18 +28,15 @@ const Home: React.FC = () => {
 
         <div className="relative z-10 max-w-4xl ml-0 pl-8 pr-4 -mt-32">
           <div className="text-left">
-
             <div className="inline-block border-2 border-blue-900 text-white px-4 py-1 rounded-full text-xs font-bold tracking-widest mb-6 animate-fade-in-up backdrop-blur-sm mt-28">
               ESTABLISHED 1920 • SALEM CHAPTER
             </div>
-
             <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 animate-fade-in-up delay-100 text-white">
               Empowering Engineering Excellence in Salem
             </h1>
             <p className="text-lg md:text-xl text-gray-200 mb-10 leading-relaxed font-light animate-fade-in-up delay-300">
               Providing a global platform for technical advancement, professional networking, and institutional growth for the engineering fraternity in Salem region.
             </p>
-
             {/* Stats in Hero */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 animate-fade-in-up delay-400">
               <div className="text-left border-2 border-iei-primary p-3 rounded-lg backdrop-blur-sm">
@@ -59,7 +56,6 @@ const Home: React.FC = () => {
                 <div className="text-xs text-gray-300">Engineering Divisions</div>
               </div>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-500">
               <Link to="/membership" className="skew-btn">
                 <span className="skew-btn_lg">
@@ -79,7 +75,7 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Feature Section: About IEI SLC */}
       < section className="py-16 bg-gray-50" >

@@ -31,7 +31,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <nav className="w-full px-4 sm:px-6 lg:px-8">
           <div className={`flex justify-between items-center transition-all duration-300 ${isScrolled ? 'h-16' : 'h-20'}`}>
             <Link to="/" className="flex items-center gap-3">
-              <img src="/data/iei-logo.png" alt="IEI Logo" className={`transition-all duration-300 ${isScrolled ? 'h-10 w-10' : 'h-14 w-14'}`} />
+              <img src="/assets/iei-logo.png" alt="IEI Logo" className={`transition-all duration-300 ${isScrolled ? 'h-10 w-10' : 'h-14 w-14'}`} />
               <div>
                 <h1 className={`text-iei-primary font-bold leading-tight transition-all duration-300 ${isScrolled ? 'text-base' : 'text-lg'}`}>The Institution of Engineers (India)</h1>
                 <p className={`text-gray-600 font-medium transition-all duration-300 ${isScrolled ? 'text-xs' : 'text-sm'}`}>Salem Local Centre (IEI-SLC)</p>
