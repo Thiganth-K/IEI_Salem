@@ -3,8 +3,8 @@ import { Linkedin, Search } from 'lucide-react';
 
 // ---------------- EXECUTIVE COMMITTEE ----------------
 export const EXECUTIVE_COMMITTEE = [
-  { id: 1, role: "Chairman", name: "Er. S. LOGANATHAN, FIE", division: "Civil", membershipType: "FIE", designation: "", imageUrl: "", linkedIn: "" },
-  { id: 2, role: "Secretary", name: "Dr. R. SATISH KUMAR, FIE", division: "Electrical", membershipType: "FIE", designation: "", imageUrl: "", linkedIn: "" },
+  { id: 1, role: "Chairman", name: "Er. S. LOGANATHAN, FIE", division: "Civil", membershipType: "FIE", designation: "", imageUrl: "/assets/Chairman.jpeg", linkedIn: "" },
+  { id: 2, role: "Secretary", name: "Dr. R. SATISH KUMAR, FIE", division: "Electrical", membershipType: "FIE", designation: "", imageUrl: "/assets/secratary.jpeg", linkedIn: "" },
   { id: 3, role: "Committee Member", name: "Dr. M. LOGESH KUMAR, MIE", division: "Agricultural", membershipType: "MIE", designation: "", imageUrl: "", linkedIn: "" },
   { id: 4, role: "Committee Member", name: "Er. J. UMANAMBI, MIE", division: "Architectural", membershipType: "MIE", designation: "", imageUrl: "", linkedIn: "" },
   { id: 5, role: "Committee Member", name: "Er. S. HARI DARWIN, AMIE", division: "Aerospace", membershipType: "AMIE", designation: "", imageUrl: "", linkedIn: "" },
@@ -162,7 +162,7 @@ export const SUB_COMMITTEES = [
       {filteredEx.filter(m => m.role === 'Chairman' || m.role === 'Secretary').map(member => (
         <div key={member.id} className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 flex group hover:scale-[1.02] transition-transform">
           <div className="w-1/3 aspect-[3/4]">
-            <img src={member.imageUrl} alt={member.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+            <img src={member.imageUrl} alt={member.name} className="w-full h-full object-cover transition-all duration-500" />
           </div>
           <div className="w-2/3 p-6 flex flex-col justify-center">
             <span className="text-iei-accent font-bold text-xs uppercase tracking-widest">{member.role}</span>
