@@ -127,24 +127,40 @@ const Home: React.FC = () => {
               Advancing the Frontiers of Engineering
             </h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              The Institution of Engineers (India) Salem Local Centre stands as
-              a beacon for professional development in the region. We are
-              dedicated to providing a forum where engineers can exchange
-              knowledge, participate in technical seminars, and shape the future
-              of local infrastructure.
+              The{" "}
+              <span className="text-sky-500 font-semibold">
+                Institution of Engineers (India)
+              </span>{" "}
+              Salem Local Centre stands as a beacon for{" "}
+              <span className="text-sky-500 font-semibold">
+                professional development
+              </span>{" "}
+              in the region. We are dedicated to providing a forum where
+              engineers can exchange knowledge, participate in{" "}
+              <span className="text-sky-500 font-semibold">
+                technical seminars
+              </span>
+              , and shape the future of{" "}
+              <span className="text-sky-500 font-semibold">
+                local infrastructure
+              </span>
+              .
             </p>
             <div className="space-y-4 mb-8">
               {[
-                "Regular technical sessions with industry experts",
-                "Career development programs for young engineers",
-                "Community outreach and disaster management support",
+                "Regular <span class='text-sky-500 font-semibold'>technical sessions</span> with industry experts",
+                "<span class='text-sky-500 font-semibold'>Career development</span> programs for young engineers",
+                "<span class='text-sky-500 font-semibold'>Community outreach</span> and disaster management support",
                 "Affiliation with the world's largest engineering body",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <div className="w-5 h-5 rounded-full bg-iei-accent/10 flex items-center justify-center text-iei-accent">
                     ✓
                   </div>
-                  <span className="text-gray-700 font-medium">{item}</span>
+                  <span
+                    className="text-gray-700 font-medium"
+                    dangerouslySetInnerHTML={{ __html: item }}
+                  ></span>
                 </div>
               ))}
             </div>
