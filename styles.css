@@ -57,6 +57,16 @@
   }
 }
 
+@keyframes scrollImages {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* Partners Auto Scroll */
 .animate-scroll-partners {
   display: flex;
@@ -78,6 +88,16 @@
   }
 }
 
+/* Images Auto Scroll */
+.animate-scroll-images {
+  display: flex;
+  width: max-content;
+  animation: scrollImages 25s linear infinite;
+}
+
+.animate-scroll-images:hover {
+  animation-play-state: paused;
+}
 /* About Page Animations */
 @keyframes fadeInLeft {
   from {
