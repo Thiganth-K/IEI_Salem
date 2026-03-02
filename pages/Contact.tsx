@@ -3,7 +3,10 @@ import React from 'react';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 
 const Contact: React.FC = () => {
+
+
   return (
+    
     <div className="bg-white min-h-screen">
       <header className="bg-iei-primary py-24 text-center text-white">
         <h1 className="text-5xl font-bold mb-4">Connect with IEI Salem</h1>
