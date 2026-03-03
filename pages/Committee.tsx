@@ -42,64 +42,64 @@ export const SUB_COMMITTEES = [
   {
     title: "Finance Sub Committee",
     members: [
-      { name: "Er. S. LOGANATHAN, FIE", membershipNo: "F-130621-5 / CV", position: "Chairman" },
-      { name: "Dr. R. SATISH KUMAR, FIE", membershipNo: "F-123297-1 / EL", position: "Convener" },
-      { name: "Er. N. ARUMUGHAM, MIE", membershipNo: "M-131411-9 / MC", position: "Member" },
-      { name: "Dr. R. LAVANYA, MIE", membershipNo: "M-152557-8 / CV", position: "Member" },
+      { name: "Er. S. LOGANATHAN, FIE", position: "Chairman" },
+      { name: "Dr. R. SATISH KUMAR, FIE", position: "Convener" },
+      { name: "Er. N. ARUMUGHAM, MIE", position: "Member" },
+      { name: "Dr. R. LAVANYA, MIE", position: "Member" },
     ],
   },
   {
     title: "Membership Drive Sub Committee",
     members: [
-      { name: "Dr. K. SENATHIPATHI, FIE", membershipNo: "F-116212-4 / MC", position: "Chairman" },
-      { name: "Er. B. MUNUSAMY, AMIE", membershipNo: "AM-153857-0 / TX", position: "Convener" },
-      { name: "Er. A. SELVA KUMAR, FIE", membershipNo: "F-128402-5 / EL", position: "Member" },
-      { name: "Dr. S. DURAISIVAM, MIE", membershipNo: "AM171494-8 MC", position: "Member" },
+      { name: "Dr. K. SENATHIPATHI, FIE", position: "Chairman" },
+      { name: "Er. B. MUNUSAMY, AMIE", position: "Convener" },
+      { name: "Er. A. SELVA KUMAR, FIE", position: "Member" },
+      { name: "Dr. S. DURAISIVAM, MIE", position: "Member" },
     ],
   },
   {
     title: "Technical Sub Committee",
     members: [
-      { name: "Dr. A. KUMARAVEL, FIE", membershipNo: "F-116212-4 / MC", position: "Chairman" },
-      { name: "Er. S. NATARAJAN, FIE", membershipNo: "Ff-117320-7 / MM", position: "Convener" },
-      { name: "Er. D. BALASUBRAMANIAM, MIE", membershipNo: "M-128331-0 / EL", position: "Member" },
-      { name: "Er. C. SIVAKUMAR, MIE", membershipNo: "M-141131-9 / CH", position: "Member" },
+      { name: "Dr. A. KUMARAVEL, FIE", position: "Chairman" },
+      { name: "Er. S. NATARAJAN, FIE", position: "Convener" },
+      { name: "Er. D. BALASUBRAMANIAM, MIE", position: "Member" },
+      { name: "Er. C. SIVAKUMAR, MIE", position: "Member" },
     ],
   },
   {
     title: "Building Sub Committee",
     members: [
-      { name: "Er. V. KANIAN POONKUNDRAN, MIE", membershipNo: "F-130363-1 CV", position: "Chairman" },
-      { name: "Er. N. SENTHIL KUMAR, FIE", membershipNo: "F-129601-5 / EN", position: "Convener" },
-      { name: "Er. R. VIJAYAKUMAR, FIE", membershipNo: "F-110728-5 / CV", position: "Member" },
-      { name: "Dr. B. PRABU, MIE", membershipNo: "M-178214-7 / CV", position: "Member" },
+      { name: "Er. V. KANIAN POONKUNDRAN, MIE", position: "Chairman" },
+      { name: "Er. N. SENTHIL KUMAR, FIE", position: "Convener" },
+      { name: "Er. R. VIJAYAKUMAR, FIE", position: "Member" },
+      { name: "Dr. B. PRABU, MIE", position: "Member" },
     ],
   },
   {
     title: "Website Development & Newsletter Sub Committee",
     members: [
-      { name: "Dr. K. THANGARAJ, FIE", membershipNo: "F-129679-1 / CP", position: "Chairman" },
-      { name: "Dr. M. LOGESH KUMAR, MIE", membershipNo: "M-172135-0 / AG", position: "Convener" },
-      { name: "Dr. C. PRABHU, AMIE", membershipNo: "AM184386-1 / PR", position: "Member" },
-      { name: "Dr. S. SASIKUMAR, MIE", membershipNo: "M-177921-9 / CV", position: "Member" },
+      { name: "Dr. K. THANGARAJ, FIE", position: "Chairman" },
+      { name: "Dr. M. LOGESH KUMAR, MIE", position: "Convener" },
+      { name: "Dr. C. PRABHU, AMIE", position: "Member" },
+      { name: "Dr. S. SASIKUMAR, MIE", position: "Member" },
     ],
   },
   {
     title: "Technician Chapter & Student Chapter Sub Committee",
     members: [
-      { name: "Dr. M. MADHESWARAN, FIE", membershipNo: "F-114704-4 / ET", position: "Chairman" },
-      { name: "Dr. G. MAHESWARAN, FIE", membershipNo: "F-121249-0 / EN", position: "Convener" },
-      { name: "Dr. V. DURAISAMY, FIE", membershipNo: "F-120732-2 / EL", position: "Member" },
-      { name: "Er. D. RAJAKUMAR, AMIE", membershipNo: "AM093619-5 / MN", position: "Member" },
+      { name: "Dr. M. MADHESWARAN, FIE", position: "Chairman" },
+      { name: "Dr. G. MAHESWARAN, FIE", position: "Convener" },
+      { name: "Dr. V. DURAISAMY, FIE", position: "Member" },
+      { name: "Er. D. RAJAKUMAR, AMIE", position: "Member" },
     ],
   },
   {
     title: "Women Engineer Cell Sub Committee",
     members: [
-      { name: "Dr. C. DHAVAMANI, FIE", membershipNo: "F-129674-0 / AS", position: "Chairman" },
-      { name: "Dr. H. LILLY BEAULAH, FIE", membershipNo: "F-128173-5 / CP", position: "Convener" },
-      { name: "Er. J. UMANAMBI, MIE", membershipNo: "M-117052-4 / AR", position: "Member" },
-      { name: "Dr. K. VIDHYA, FIE", membershipNo: "F-130220-1 EN", position: "Member" },
+      { name: "Dr. C. DHAVAMANI, FIE", position: "Chairman" },
+      { name: "Dr. H. LILLY BEAULAH, FIE", position: "Convener" },
+      { name: "Er. J. UMANAMBI, MIE", position: "Member" },
+      { name: "Dr. K. VIDHYA, FIE", position: "Member" },
     ],
   },
 ];
@@ -109,10 +109,19 @@ export const SUB_COMMITTEES = [
   const [activeTab, setActiveTab] = useState<'executive' | 'sub'>('executive');
   const [search, setSearch] = useState('');
 
+  const searchLower = search.toLowerCase();
   const filteredEx = EXECUTIVE_COMMITTEE.filter(m => 
-    m.name.toLowerCase().includes(search.toLowerCase()) || 
-    m.division.toLowerCase().includes(search.toLowerCase())
+    m.name.toLowerCase().includes(searchLower) || 
+    m.division.toLowerCase().includes(searchLower)
   );
+
+  // Filter subcommittees and their members based on search
+  const filteredSubCommittees = SUB_COMMITTEES.map(sub => {
+    const filteredMembers = sub.members.filter(m =>
+      m.name.toLowerCase().includes(searchLower)
+    );
+    return { ...sub, members: filteredMembers };
+  }).filter(sub => sub.members.length > 0 || search === '');
 
   return (
     <div className="bg-gray-50 min-h-screen">
@@ -228,7 +237,7 @@ export const SUB_COMMITTEES = [
   </div>
 ) : (
   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-    {SUB_COMMITTEES.map((sub, i) => (
+    {filteredSubCommittees.map((sub, i) => (
       <div key={i} className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
         <h3 className="text-xl font-bold text-iei-primary mb-6 flex items-center gap-3">
           <div className="w-2 h-8 bg-iei-accent rounded-full"></div>
@@ -239,7 +248,6 @@ export const SUB_COMMITTEES = [
             <div key={idx} className="flex justify-between items-center p-3 rounded-xl bg-gray-50 border border-gray-100">
               <div>
                 <p className="font-bold text-gray-800">{m.name}</p>
-                <p className="text-xs text-gray-400">{m.membershipNo}</p>
               </div>
               <span className={`text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter ${
                 m.position === 'Chairman' ? 'bg-iei-primary text-white' : 
