@@ -434,12 +434,14 @@ const About: React.FC = () => {
             advancement of engineering in Salem.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/membership"
+            <a
+              href="https://www.ieindia.org/webui/iei-Memb.aspx"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-iei-accent text-white px-8 py-4 rounded-full font-bold hover:bg-blue-600 transition-all shadow-lg hover:shadow-xl"
             >
               Become a Member
-            </Link>
+            </a>
             <Link
               to="/events"
               className="bg-white text-iei-primary px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl"
