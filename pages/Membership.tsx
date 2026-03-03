@@ -13,7 +13,14 @@ const Membership: React.FC = () => {
               Gain professional recognition, access to exclusive technical resources, and a network that spans the globe.
             </p>
             <div className="flex flex-wrap gap-4">
-              <button className="bg-iei-accent text-white px-8 py-3 rounded-full font-bold hover:shadow-xl transition-all">Apply Online</button>
+              <a
+                href="https://www.ieindia.org/webui/iei-Memb.aspx"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-iei-accent text-white px-8 py-3 rounded-full font-bold hover:shadow-xl transition-all"
+              >
+                Apply Online
+              </a>
               <button className="border border-white/30 px-8 py-3 rounded-full font-bold hover:bg-white/10 transition-all">Download Forms</button>
             </div>
           </div>

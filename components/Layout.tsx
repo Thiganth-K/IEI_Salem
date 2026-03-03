@@ -21,6 +21,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     { name: 'Events', path: '/events' },
     { name: 'Membership', path: '/membership' },
     { name: 'Gallery', path: '/gallery' },
+    // Students Chapter external link
+    { name: 'Students Chapter', external: true, url: 'https://www.ieindia.org/webui/IEI-Network.aspx#students-chapters' },
     { name: 'Contact', path: '/contact' }
   ];
 
@@ -41,14 +43,25 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             {/* Desktop Menu */}
             <div className="hidden lg:flex items-center space-x-6">
               {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={`text-sm font-semibold transition-colors ${location.pathname === link.path ? 'text-iei-accent underline underline-offset-8 decoration-2' : 'text-gray-700 hover:text-iei-primary'
-                    }`}
-                >
-                  {link.name}
-                </Link>
+                link.external ? (
+                  <a
+                    key={link.name}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-semibold text-gray-700 hover:text-iei-primary transition-colors"
+                  >
+                    {link.name}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className={`text-sm font-semibold transition-colors ${location.pathname === link.path ? 'text-iei-accent underline underline-offset-8 decoration-2' : 'text-gray-700 hover:text-iei-primary'}`}
+                  >
+                    {link.name}
+                  </Link>
+                )
               ))}
               <Link to="/membership" className="bg-iei-primary text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-blue-900 transition-all shadow-lg">
                 Join Us
@@ -66,14 +79,27 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         {isMenuOpen && (
           <div className="lg:hidden bg-white border-t border-gray-100 p-4 space-y-4 shadow-xl">
             {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className="block text-gray-800 font-medium py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.name}
-              </Link>
+              link.external ? (
+                <a
+                  key={link.name}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-gray-800 font-medium py-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className="block text-gray-800 font-medium py-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
             <Link to="/membership" className="block w-full text-center bg-iei-primary text-white py-3 rounded-lg" onClick={() => setIsMenuOpen(false)}>
               Become a Member
