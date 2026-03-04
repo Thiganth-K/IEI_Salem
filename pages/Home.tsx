@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Ticker from "../components/Ticker";
 import GlareHover from "../components/GlareHover";
@@ -19,54 +19,21 @@ import { MOCK_EVENTS } from "../constants";
 
 const Home: React.FC = () => {
   const featuredEvent = MOCK_EVENTS[0];
-
-  // Slideshow state
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = [
-    "/assets/iei-home.jpg",
-    "/assets/iei-home1.jpg",
-    "/assets/Chairman.jpeg",
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 4000); // Change slide every 4 seconds
-
-    return () => clearInterval(timer);
-  }, [slides.length]);
+  const backgroundImage = "/assets/iei-home.jpg";
 
   return (
     <div>
       <Ticker />
 
-      {/* Hero Section with Slideshow */}
+      {/* Hero Section with Static Background */}
       <section className="relative h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          {slides.map((slide, index) => (
-            <img
-              key={index}
-              src={slide}
-              alt={`Slide ${index + 1}`}
-              className={`w-full h-full object-cover scale-105 transition-opacity duration-1000 ${
-                index === currentSlide ? "opacity-100" : "opacity-0"
-              }`}
-            />
-          ))}
+          <img
+            src={backgroundImage}
+            alt="Hero Background"
+            className="w-full h-full object-cover scale-105"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-iei-primary/60"></div>
-        </div>
-
-        {/* Navigation Dots */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all ${
-                index === currentSlide ? "bg-white" : "bg-white/50"
-              }`}
-            />
-          ))}
         </div>
 
         <div className="relative z-10 max-w-4xl ml-0 pl-8 pr-4 -mt-32">
