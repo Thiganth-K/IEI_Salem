@@ -209,7 +209,7 @@ const About: React.FC = () => {
             <div className="relative animate-fade-in-up delay-200">
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://picsum.photos/seed/iei-building/800/800"
+                  src="/assets/about-legacy.jpg.jpeg"
                   alt="IEI Salem Building"
                   className="w-full h-full object-cover"
                 />

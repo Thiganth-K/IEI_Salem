@@ -21,9 +21,7 @@ const Contact: React.FC = () => {
               <div>
                 <h4 className="font-bold text-lg mb-1">Registered Address</h4>
                 <p className="text-gray-500 leading-relaxed">
-                  The Institution of Engineers (India), Salem Local Centre,<br />
-                  Sona College of Technology Campus,<br />
-                  Salem, Tamil Nadu - 636005
+                  Salem Local Centre, Sona College of Technology Campus, Salem, TN 636005
                 </p>
               </div>
             </div>

@@ -142,11 +142,11 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           <div>
             <h3 className="text-xl font-bold border-b border-white/20 pb-2 mb-6">Categories</h3>
             <ul className="space-y-3 text-sm text-gray-300">
-              <li>Civil & Environmental</li>
-              <li>Electrical & Electronics</li>
-              <li>Mechanical & Production</li>
-              <li>Computer Science</li>
-              <li>Student Chapters</li>
+              <li>R & D Activities</li>
+              <li>Technical Activity Guide Book</li>
+              <li>Indian Engineering Congress</li>
+              <li>Convention & Convocation</li>
+              <li>Seminars and Workshops</li>
             </ul>
           </div>
 
