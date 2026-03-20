@@ -209,13 +209,43 @@ const About: React.FC = () => {
             <div className="relative animate-fade-in-up delay-200">
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://picsum.photos/seed/iei-building/800/800"
+                  src="/assets/about-legacy.jpg.jpeg"
                   alt="IEI Salem Building"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-iei-accent/20 rounded-full blur-3xl -z-10"></div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action Section (moved below Introduction) */}
+      <section className="py-20 bg-iei-primary text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">
+            Join Our Engineering Community
+          </h2>
+          <p className="text-xl text-gray-200 mb-10">
+            Be part of a legacy of excellence. Connect with fellow engineers,
+            access professional development resources, and contribute to the
+            advancement of engineering in Salem.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://www.ieindia.org/webui/IEI-RegistrationForMembApp.aspx"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-iei-accent text-white px-8 py-4 rounded-full font-bold hover:bg-blue-600 transition-all shadow-lg hover:shadow-xl"
+            >
+              Become a Member
+            </a>
+            <Link
+              to="/events"
+              className="bg-white text-iei-primary px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl"
+            >
+              Explore Events
+            </Link>
           </div>
         </div>
       </section>
@@ -422,33 +452,6 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Call to Action Section */}
-      <section className="py-20 bg-iei-primary text-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Join Our Engineering Community
-          </h2>
-          <p className="text-xl text-gray-200 mb-10">
-            Be part of a legacy of excellence. Connect with fellow engineers,
-            access professional development resources, and contribute to the
-            advancement of engineering in Salem.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/membership"
-              className="bg-iei-accent text-white px-8 py-4 rounded-full font-bold hover:bg-blue-600 transition-all shadow-lg hover:shadow-xl"
-            >
-              Become a Member
-            </Link>
-            <Link
-              to="/events"
-              className="bg-white text-iei-primary px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl"
-            >
-              Explore Events
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

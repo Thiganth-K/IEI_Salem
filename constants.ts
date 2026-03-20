@@ -108,5 +108,7 @@ export const MOCK_GALLERY: GalleryItem[] = [
   { id: 'g1', imageUrl: 'https://picsum.photos/seed/gal1/800/600', category: 'Annual General Meetings', caption: 'AGM 2024 Group Photo', year: 2024 },
   { id: 'g2', imageUrl: 'https://picsum.photos/seed/gal2/800/600', category: 'Technical Seminars', caption: 'Workshop on IoT', year: 2024 },
   { id: 'g3', imageUrl: 'https://picsum.photos/seed/gal3/800/600', category: 'Workshops', caption: 'Hands-on CAD Training', year: 2023 },
-  { id: 'g4', imageUrl: 'https://picsum.photos/seed/gal4/800/600', category: 'Special Events', caption: 'Engineers Day Celebration', year: 2024 }
+  { id: 'g4', imageUrl: 'https://picsum.photos/seed/gal4/800/600', category: 'Special Events', caption: 'Engineers Day Celebration', year: 2024 },
+  { id: 'g5', imageUrl: '/assets/about-legacy.jpg.jpeg', category: 'Annual General Meetings', caption: 'Annual General Meeting', year: 2025 },
+  { id: 'g6', imageUrl: 'https://picsum.photos/seed/gal6/800/600', category: 'Technical Seminars', caption: 'Future Tech Trends', year: 2025 }
 ];
