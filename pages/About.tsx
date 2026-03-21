@@ -67,16 +67,10 @@ const About: React.FC = () => {
         "The Institution of Engineers (India) was established to promote engineering excellence.",
     },
     {
-      year: "1965",
+      year: "1994",
       title: "Salem Chapter Established",
       description:
         "Salem Local Centre was formed to serve the engineering community in the region.",
-    },
-    {
-      year: "1990",
-      title: "Expansion Phase",
-      description:
-        "Significant growth in membership and activities across multiple engineering disciplines.",
     },
     {
       year: "2010",
@@ -88,7 +82,7 @@ const About: React.FC = () => {
       year: "2024",
       title: "Modern Era",
       description:
-        "Leading the way in professional development and technical innovation in Salem.",
+        "Leading the way in professional development in salem through engineering talk - an online webinar series 2023",
     },
   ];
 
@@ -149,7 +143,7 @@ const About: React.FC = () => {
             About IEI Salem
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 animate-fade-in-up delay-100">
-            Empowering Engineers Since 1965
+            Empowering Engineers Since 1994
           </p>
           <div className="mt-6 flex items-center justify-center gap-2 text-sm animate-fade-in-up delay-200">
             <Link to="/" className="hover:text-iei-accent transition-colors">
@@ -179,7 +173,7 @@ const About: React.FC = () => {
                 </span>{" "}
                 Salem Local Centre has been a cornerstone of professional
                 engineering development in the Salem region{" "}
-                <span className="text-sky-500 font-semibold">since 1965</span>.
+                <span className="text-sky-500 font-semibold">since 1994</span>.
                 As part of the world's largest multi-disciplinary professional
                 body, we serve as a vital platform for{" "}
                 <span className="text-sky-500 font-semibold">
