@@ -15,7 +15,7 @@ import {
   Clock,
   Calendar,
 } from "lucide-react";
-import { MOCK_EVENTS } from "../constants";
+import { MOCK_EVENTS, MOCK_GALLERY } from "../constants";
 
 const Home: React.FC = () => {
   const featuredEvent = MOCK_EVENTS[0];
@@ -300,43 +300,26 @@ const Home: React.FC = () => {
       <section className="py-16 bg-gray-50 border-t overflow-hidden">
         <div className="max-w-7xl mx-auto px-4">
           <h3 className="text-center text-gray-500 font-bold uppercase tracking-widest text-xs mb-10">
-            Our Partners & Affiliations
+            Photo Gallery
           </h3>
         </div>
         <div className="relative">
-          <div className="flex animate-scroll-partners gap-16 items-center">
+          <div className="flex animate-scroll-partners gap-6 items-center">
             {[...Array(2)].map((_, setIndex) => (
-              <div key={setIndex} className="flex gap-16 items-center shrink-0">
-                <img
-                  src="https://picsum.photos/seed/partner1/150/80"
-                  alt="Partner 1"
-                  className="h-16 w-auto object-contain transition-all opacity-60 hover:opacity-100"
-                />
-                <img
-                  src="https://picsum.photos/seed/partner2/150/80"
-                  alt="Partner 2"
-                  className="h-16 w-auto object-contain transition-all opacity-60 hover:opacity-100"
-                />
-                <img
-                  src="https://picsum.photos/seed/partner3/150/80"
-                  alt="Partner 3"
-                  className="h-16 w-auto object-contain transition-all opacity-60 hover:opacity-100"
-                />
-                <img
-                  src="https://picsum.photos/seed/partner4/150/80"
-                  alt="Partner 4"
-                  className="h-16 w-auto object-contain transition-all opacity-60 hover:opacity-100"
-                />
-                <img
-                  src="https://picsum.photos/seed/partner5/150/80"
-                  alt="Partner 5"
-                  className="h-16 w-auto object-contain transition-all opacity-60 hover:opacity-100"
-                />
-                <img
-                  src="https://picsum.photos/seed/partner6/150/80"
-                  alt="Partner 6"
-                  className="h-16 w-auto object-contain transition-all opacity-60 hover:opacity-100"
-                />
+              <div key={setIndex} className="flex gap-6 items-center shrink-0">
+                {MOCK_GALLERY.map((photo) => (
+                  <div key={photo.id} className="relative group overflow-hidden rounded-xl shadow-md shrink-0 w-80 h-56 cursor-pointer">
+                    <img
+                      src={photo.imageUrl}
+                      alt={photo.caption}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                      <span className="text-white font-bold text-sm truncate">{photo.caption}</span>
+                      <span className="text-iei-accent text-xs font-medium">{photo.category}</span>
+                    </div>
+                  </div>
+                ))}
               </div>
             ))}
           </div>
