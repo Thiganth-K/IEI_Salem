@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Ticker from "../components/Ticker";
 import GlareHover from "../components/GlareHover";
@@ -19,6 +19,24 @@ import { MOCK_EVENTS, MOCK_GALLERY } from "../constants";
 
 const Home: React.FC = () => {
   const featuredEvent = MOCK_EVENTS[0];
+
+  const [carouselIndex, setCarouselIndex] = useState(0);
+  const featureImages = [
+    "/assets/feature-1.jpg",
+    "/assets/feature-2.jpg",
+    "/assets/feature-3.jpg",
+    "/assets/feature-4.jpg",
+    "/assets/feature-5.jpg",
+    "/assets/feature-6.jpg",
+    "/assets/feature-7.jpg",
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCarouselIndex((prev) => (prev + 1) % featureImages.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div>
@@ -111,11 +129,16 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl relative z-10">
-              <img
-                src="/assets/agm.jpg.jpeg"
-                alt="31st Annual General Meeting"
-                className="w-full h-full object-cover"
-              />
+              {featureImages.map((src, index) => (
+                <img
+                  key={src}
+                  src={src}
+                  alt={`Feature ${index + 1}`}
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                    index === carouselIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+                  }`}
+                />
+              ))}
             </div>
             <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-iei-accent/20 rounded-full blur-3xl -z-0"></div>
           </div>
