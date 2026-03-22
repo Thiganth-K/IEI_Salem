@@ -71,7 +71,7 @@ export const MOCK_EVENTS: Event[] = [
     venue: 'IEI Salem Hall, Salem',
     type: 'Membership',
     description: 'The annual gathering of all IEI Salem members to discuss progress and future plans.',
-    imageUrl: 'https://picsum.photos/seed/agm/800/400',
+    imageUrl: '/assets/featured-event.jpg',
     status: 'Upcoming',
     speakers: ['IEI National President', 'Chairman IEI-SLC']
   },
