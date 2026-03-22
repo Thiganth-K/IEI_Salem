@@ -71,7 +71,7 @@ export const MOCK_EVENTS: Event[] = [
     venue: 'IEI Salem Hall, Salem',
     type: 'Membership',
     description: 'The annual gathering of all IEI Salem members to discuss progress and future plans.',
-    imageUrl: 'https://picsum.photos/seed/agm/800/400',
+    imageUrl: '/assets/featured-event.jpg',
     status: 'Upcoming',
     speakers: ['IEI National President', 'Chairman IEI-SLC']
   },
@@ -105,8 +105,16 @@ export const MOCK_ANNOUNCEMENTS: Announcement[] = [
 ];
 
 export const MOCK_GALLERY: GalleryItem[] = [
-  { id: 'g1', imageUrl: 'https://picsum.photos/seed/gal1/800/600', category: 'Annual General Meetings', caption: 'AGM 2024 Group Photo', year: 2024 },
-  { id: 'g2', imageUrl: 'https://picsum.photos/seed/gal2/800/600', category: 'Technical Seminars', caption: 'Workshop on IoT', year: 2024 },
-  { id: 'g3', imageUrl: 'https://picsum.photos/seed/gal3/800/600', category: 'Workshops', caption: 'Hands-on CAD Training', year: 2023 },
-  { id: 'g4', imageUrl: 'https://picsum.photos/seed/gal4/800/600', category: 'Special Events', caption: 'Engineers Day Celebration', year: 2024 }
+  { id: 'g1', imageUrl: '/assets/photo-1.jpg.JPG', category: 'Annual General Meetings', caption: 'AGM 2024 Group Photo', year: 2024 },
+  { id: 'g2', imageUrl: '/assets/photo-2.jpg.JPG', category: 'Technical Seminars', caption: 'Workshop on IoT', year: 2024 },
+  { id: 'g3', imageUrl: '/assets/photo-3.jpg.JPG', category: 'Workshops', caption: 'Hands-on CAD Training', year: 2023 },
+  { id: 'g4', imageUrl: '/assets/photo-4.jpg.JPG', category: 'Special Events', caption: 'Engineers Day Celebration', year: 2024 },
+  { id: 'g5', imageUrl: '/assets/photo-5.jpg.JPG', category: 'Annual General Meetings', caption: 'Annual General Meeting', year: 2025 },
+  { id: 'g6', imageUrl: '/assets/photo-6.jpg.JPG', category: 'Technical Seminars', caption: 'Future Tech Trends', year: 2025 },
+  { id: 'g7', imageUrl: '/assets/photo-7.jpg.JPG', category: 'Workshops', caption: 'Python for Engineers', year: 2025 },
+  { id: 'g8', imageUrl: '/assets/photo-8.jpg.JPG', category: 'Special Events', caption: 'Industrial Visit', year: 2025 },
+  { id: 'g9', imageUrl: '/assets/photo-9.jpg.JPG', category: 'Annual General Meetings', caption: 'AGM 2023', year: 2023 },
+  { id: 'g10', imageUrl: '/assets/photo-10.jpg.JPG', category: 'Technical Seminars', caption: 'AI Symposium', year: 2025 },
+  { id: 'g11', imageUrl: '/assets/photo-11.jpg.JPG', category: 'Workshops', caption: 'Robotics Workshop', year: 2024 },
+  { id: 'g12', imageUrl: '/assets/photo-12.jpg.JPG', category: 'Special Events', caption: 'National Science Day', year: 2024 }
 ];

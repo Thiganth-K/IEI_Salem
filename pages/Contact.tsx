@@ -24,9 +24,11 @@ const Contact: React.FC = () => {
               <div>
                 <h4 className="font-bold text-lg mb-1">Registered Address</h4>
                 <p className="text-gray-500 leading-relaxed">
-                  The Institution of Engineers (India), Salem Local Centre,<br />
-                  Sona College of Technology Campus,<br />
-                  Salem, Tamil Nadu - 636005
+                  The Institution of Engineers (India)-Salem Local Centre,
+                  <br />
+                  3rd Floor, SPC Bhawan, No: 104/7, Manivannan Road,
+                  <br />
+                  Opp. to Salem New Bus Stand, Salem - 636 004
                 </p>
               </div>
             </div>
@@ -69,7 +71,7 @@ const Contact: React.FC = () => {
         <div>
           <div className="rounded-3xl overflow-hidden shadow-2xl h-[400px] border border-gray-100 mb-8">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.398284698522!2d78.1368565!3d11.6845214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf1c304892c9f%3A0x600b21e8636b0be6!2sSona%20College%20of%20Technology!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+              src="https://maps.google.com/maps?q=Salem%20New%20Bus%20Stand,%20Salem,%20Tamil%20Nadu&t=&z=15&ie=UTF8&iwloc=&output=embed" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
@@ -81,7 +83,7 @@ const Contact: React.FC = () => {
           <div className="bg-iei-accent/5 p-8 rounded-2xl border border-iei-accent/10">
             <h4 className="font-bold text-iei-primary mb-2">Getting Here</h4>
             <p className="text-sm text-gray-600">
-              The centre is conveniently located within the Sona College of Technology campus, accessible by all major city buses and 10 minutes from Salem Junction Railway Station.
+              The centre is conveniently located near SPC Bhawan, opposite to Salem New Bus Stand, easily accessible by all major city buses.
             </p>
           </div>
         </div>

@@ -37,15 +37,15 @@ const Gallery: React.FC = () => {
           ))}
         </div>
 
-        {/* Masonry Grid Simulation */}
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+        {/* Grid Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredImages.map(item => (
             <div 
               key={item.id} 
-              className="relative group break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all cursor-pointer"
+              className="relative group rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all cursor-pointer h-64 lg:h-80"
               onClick={() => setSelectedImage(item.imageUrl)}
             >
-              <img src={item.imageUrl} alt={item.caption} className="w-full object-cover" />
+              <img src={item.imageUrl} alt={item.caption} className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-iei-primary/90 via-iei-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                 <span className="text-iei-accent text-[10px] font-bold uppercase tracking-widest mb-1">{item.category} • {item.year}</span>
                 <h4 className="text-white font-bold text-lg mb-4">{item.caption}</h4>

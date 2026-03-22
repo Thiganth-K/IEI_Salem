@@ -142,18 +142,18 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           <div>
             <h3 className="text-xl font-bold border-b border-white/20 pb-2 mb-6">Categories</h3>
             <ul className="space-y-3 text-sm text-gray-300">
-              <li>Civil & Environmental</li>
-              <li>Electrical & Electronics</li>
-              <li>Mechanical & Production</li>
-              <li>Computer Science</li>
-              <li>Student Chapters</li>
+              <li>R & D Activities</li>
+              <li>Technical Activity Guide Book</li>
+              <li>Indian Engineering Congress</li>
+              <li>Convention & Convocation</li>
+              <li>Seminars and Workshops</li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-xl font-bold border-b border-white/20 pb-2 mb-6">Address</h3>
             <ul className="space-y-4 text-sm text-gray-300">
-              <li className="flex gap-3"><MapPin className="shrink-0 text-iei-accent" size={18} /> Salem Local Centre, Sona College of Technology Campus, Salem, TN 636005</li>
+              <li className="flex gap-3"><MapPin className="shrink-0 text-iei-accent" size={18} /> The Institution of Engineers (India)-Salem Local Centre, 3rd Floor, SPC Bhawan, No: 104/7, Manivannan Road, Opp. to Salem New Bus Stand, Salem - 636 004</li>
               <li className="flex gap-3"><Phone className="shrink-0 text-iei-accent" size={18} /> +91 427 244 0405</li>
               <li className="flex gap-3"><Mail className="shrink-0 text-iei-accent" size={18} /> ieisalem@gmail.com</li>
             </ul>

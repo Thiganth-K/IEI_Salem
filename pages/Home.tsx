@@ -15,58 +15,42 @@ import {
   Clock,
   Calendar,
 } from "lucide-react";
-import { MOCK_EVENTS } from "../constants";
+import { MOCK_EVENTS, MOCK_GALLERY } from "../constants";
 
 const Home: React.FC = () => {
   const featuredEvent = MOCK_EVENTS[0];
 
-  // Slideshow state
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = [
-    "/assets/iei-home.jpg",
-    "/assets/iei-home1.jpg",
-    "/assets/Chairman.jpeg",
+  const [carouselIndex, setCarouselIndex] = useState(0);
+  const featureImages = [
+    "/assets/feature-1.jpg",
+    "/assets/feature-2.jpg",
+    "/assets/feature-3.jpg",
+    "/assets/feature-4.jpg",
+    "/assets/feature-5.jpg",
+    "/assets/feature-6.jpg",
+    "/assets/feature-7.jpg",
   ];
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 4000); // Change slide every 4 seconds
-
+      setCarouselIndex((prev) => (prev + 1) % featureImages.length);
+    }, 3000);
     return () => clearInterval(timer);
-  }, [slides.length]);
+  }, []);
 
   return (
     <div>
       <Ticker />
 
-      {/* Hero Section with Slideshow */}
+      {/* Hero Section */}
       <section className="relative h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          {slides.map((slide, index) => (
-            <img
-              key={index}
-              src={slide}
-              alt={`Slide ${index + 1}`}
-              className={`w-full h-full object-cover scale-105 transition-opacity duration-1000 ${
-                index === currentSlide ? "opacity-100" : "opacity-0"
-              }`}
-            />
-          ))}
+          <img
+            src="/assets/iei-home.jpg"
+            alt="IEI Salem Center Hero"
+            className="w-full h-full object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-iei-primary/60"></div>
-        </div>
-
-        {/* Navigation Dots */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all ${
-                index === currentSlide ? "bg-white" : "bg-white/50"
-              }`}
-            />
-          ))}
         </div>
 
         <div className="relative z-10 max-w-4xl ml-0 pl-8 pr-4 -mt-32">
@@ -86,7 +70,7 @@ const Home: React.FC = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 animate-fade-in-up delay-400">
               <div className="text-left border-2 border-iei-primary p-3 rounded-lg backdrop-blur-sm">
                 <div className="text-2xl md:text-3xl font-bold text-white mb-1">
-                  5,000+
+                  2,780+
                 </div>
                 <div className="text-xs text-gray-300">Active Members</div>
               </div>
@@ -145,11 +129,16 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl relative z-10">
-              <img
-                src="https://picsum.photos/seed/aboutiei/800/800"
-                alt="Building"
-                className="w-full h-full object-cover"
-              />
+              {featureImages.map((src, index) => (
+                <img
+                  key={src}
+                  src={src}
+                  alt={`Feature ${index + 1}`}
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                    index === carouselIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+                  }`}
+                />
+              ))}
             </div>
             <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-iei-accent/20 rounded-full blur-3xl -z-0"></div>
           </div>
@@ -334,43 +323,26 @@ const Home: React.FC = () => {
       <section className="py-16 bg-gray-50 border-t overflow-hidden">
         <div className="max-w-7xl mx-auto px-4">
           <h3 className="text-center text-gray-500 font-bold uppercase tracking-widest text-xs mb-10">
-            Our Partners & Affiliations
+            Photo Gallery
           </h3>
         </div>
         <div className="relative">
-          <div className="flex animate-scroll-partners gap-16 items-center">
+          <div className="flex animate-scroll-partners gap-6 items-center">
             {[...Array(2)].map((_, setIndex) => (
-              <div key={setIndex} className="flex gap-16 items-center shrink-0">
-                <img
-                  src="https://picsum.photos/seed/partner1/150/80"
-                  alt="Partner 1"
-                  className="h-16 w-auto object-contain transition-all opacity-60 hover:opacity-100"
-                />
-                <img
-                  src="https://picsum.photos/seed/partner2/150/80"
-                  alt="Partner 2"
-                  className="h-16 w-auto object-contain transition-all opacity-60 hover:opacity-100"
-                />
-                <img
-                  src="https://picsum.photos/seed/partner3/150/80"
-                  alt="Partner 3"
-                  className="h-16 w-auto object-contain transition-all opacity-60 hover:opacity-100"
-                />
-                <img
-                  src="https://picsum.photos/seed/partner4/150/80"
-                  alt="Partner 4"
-                  className="h-16 w-auto object-contain transition-all opacity-60 hover:opacity-100"
-                />
-                <img
-                  src="https://picsum.photos/seed/partner5/150/80"
-                  alt="Partner 5"
-                  className="h-16 w-auto object-contain transition-all opacity-60 hover:opacity-100"
-                />
-                <img
-                  src="https://picsum.photos/seed/partner6/150/80"
-                  alt="Partner 6"
-                  className="h-16 w-auto object-contain transition-all opacity-60 hover:opacity-100"
-                />
+              <div key={setIndex} className="flex gap-6 items-center shrink-0">
+                {MOCK_GALLERY.map((photo) => (
+                  <div key={photo.id} className="relative group overflow-hidden rounded-xl shadow-md shrink-0 w-80 h-56 cursor-pointer">
+                    <img
+                      src={photo.imageUrl}
+                      alt={photo.caption}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                      <span className="text-white font-bold text-sm truncate">{photo.caption}</span>
+                      <span className="text-iei-accent text-xs font-medium">{photo.category}</span>
+                    </div>
+                  </div>
+                ))}
               </div>
             ))}
           </div>
@@ -400,9 +372,7 @@ const Home: React.FC = () => {
                     Address
                   </h4>
                   <p className="text-gray-400">
-                    Sona College of Technology Campus,
-                    <br />
-                    Salem, Tamil Nadu - 636005
+                    The Institution of Engineers (India)-Salem Local Centre, 3rd Floor, SPC Bhawan, No: 104/7, Manivannan Road, Opp. to Salem New Bus Stand, Salem - 636 004
                   </p>
                 </div>
               </div>
