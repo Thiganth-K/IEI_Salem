@@ -52,7 +52,7 @@ const Home: React.FC = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 animate-fade-in-up delay-400">
               <div className="text-left border-2 border-iei-primary p-3 rounded-lg backdrop-blur-sm">
                 <div className="text-2xl md:text-3xl font-bold text-white mb-1">
-                  5,000+
+                  2,780+
                 </div>
                 <div className="text-xs text-gray-300">Active Members</div>
               </div>
@@ -349,7 +349,7 @@ const Home: React.FC = () => {
                     Address
                   </h4>
                   <p className="text-gray-400">
-                    Salem Local Centre, Sona College of Technology Campus, Salem, TN 636005
+                    The Institution of Engineers (India)-Salem Local Centre, 3rd Floor, SPC Bhawan, No: 104/7, Manivannan Road, Opp. to Salem New Bus Stand, Salem - 636 004
                   </p>
                 </div>
               </div>

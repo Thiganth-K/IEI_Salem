@@ -35,7 +35,7 @@ const About: React.FC = () => {
   const stats = [
     {
       icon: <Users size={40} />,
-      value: 5000,
+      value: 2780,
       label: "Active Members",
       suffix: "+",
     },
